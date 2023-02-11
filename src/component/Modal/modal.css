@@ -1,0 +1,84 @@
+.backdrop {
+    position: fixed;
+    top: 0; right: 0; left: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.185);
+    animation-name: backdrop;
+    animation-duration: 0.3s;
+    color: black;
+}
+
+@keyframes backdrop {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.incomeModal {
+    width: 600px;
+    height: 600px;
+    border: 2px solid grey;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(32, 233, 25, 0.356);
+    animation-name: incomeModal;
+    animation-duration: 0.3s;
+}
+
+@keyframes incomeModal {
+    0% {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.expenceModal {
+    width: 600px;
+    height: 600px;
+    border: 2px solid grey;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(241, 7, 7, 0.336);
+    animation-name: expenceModal;
+    animation-duration: 0.3s;
+}
+
+@keyframes expenceModal {
+    0% {
+        opacity: 0;
+        transform: translateX( 110%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.modalHeader {
+    padding: 4px 8px;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.modalBody {
+    height: 84%;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    padding: 20px 80px;
+    overflow: auto
+}
+
+.mb-3 {
+    text-align: right;
+}

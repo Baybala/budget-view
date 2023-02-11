@@ -1,0 +1,225 @@
+.form-control, 
+.form-select {
+    margin: 0px;
+    height: 35px;
+    transition: border-color 5s;
+}
+
+.form-control:hover, 
+.form-select:hover {
+    border-color:rgb(35, 184, 243);
+}
+
+.t-Row {
+    position: relative;
+}
+
+.edit_del_buttons{
+    position: absolute;
+    right: 0px;  
+    display: flex;
+    flex-direction: row; 
+}
+
+.edit_button {
+    content-visibility: hidden;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; 
+}
+
+.t-Row:hover > .edit_del_buttons > .edit_button {
+    content-visibility: visible;
+    animation-name: animate-edit;
+    animation-duration: 0.5s;
+}
+
+@keyframes animate-edit {
+    0% {
+        right: 0px;
+    }
+    100% {
+        right: 20px;
+    }
+}
+
+.edit {
+    color: rgb(35, 209, 4);
+}
+
+.t-Row > .edit_del_buttons > .edit_button > .edit:hover   {
+    animation: hover-edit 0.5s;
+    color: whitesmoke;
+    
+}
+
+.del_button {
+    content-visibility: hidden;
+    cursor: pointer;
+    position: absolute;
+    right: 50px; 
+}
+
+.t-Row:hover > .edit_del_buttons > .del_button {
+    content-visibility: visible;
+    animation-name: animate-del;
+    animation-duration: 0.5s;
+}
+
+@keyframes animate-del {
+    0% {
+        right: 30px;
+    }
+    100% {
+        right: 50px;
+    }
+}
+
+/* Code below will render % when howered income list  */
+
+.incomeListsRow {
+    height: 25px;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    border: 1px solid green;
+}
+
+.expenceListsRow {
+    border: 1px solid red;
+}
+
+.incomeValue {
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    right: -25px;
+    transition: all 0.5s;
+    /* border: 2px solid white; */
+}
+
+.incomeListsRow:hover .incomeValue {
+    position: relative;
+    right: 4px;
+}
+
+.incomeValue div {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    right: -10px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.incomeListsRow:hover .incomeValue div {
+    right: -5px;
+    opacity: 1;
+}
+
+/* Code below will render % when howered expence list  */
+
+.expenceListsRow {
+    height: 25px;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    border: 1px solid red;
+}
+
+.expenceValue {
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    left: -25px;
+    transition: all 0.5s;
+}
+
+.expenceListsRow:hover .expenceValue {
+    position: relative;
+    left: 4px;
+}
+
+.expenceValue div {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    left: -10px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.expenceListsRow:hover .expenceValue div {
+    left: -5px;
+    width: 25px;
+    opacity: 1;
+}
+
+/* delete confirmation */
+
+.dialogBacdrop {
+    position: fixed;
+    display: flex;
+    top: 0; right: 0; left: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: backdrop_animate 0.5s;
+}
+
+.dialog {
+    width: 400px;
+    height: 200px;
+    background-color: whitesmoke;
+    margin: auto;
+    animation: dialog_animate 0.5s;
+}
+
+@keyframes backdrop_animate {
+    0% {
+        top: -1000px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }    
+}
+
+@keyframes dialog_animate {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }    
+}
+
+.dialog_header {
+    display: flex;
+    height: 40px;
+    border-bottom: 2px solid grey;
+    align-items: center;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dialog_body {
+    display: flex;
+    height: 90px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.dialog_buttons {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.dialog_buttons button {
+    margin-left: 10px;
+}
+

@@ -1,0 +1,51 @@
+/*sets margins and colot of entire sheet*/
+.chartMain {
+    margin: 5px 50px 0px 50px;
+    color: whitesmoke;
+}
+/*styles the categories*/
+.categories {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.incomes, .expences {
+    width: 50%;
+    padding: 0 50px;
+    opacity: 0.6;
+    
+}
+
+.period {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.phase {
+    margin: 0 50px;
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 3px 0;
+    cursor: pointer;
+}
+
+.phase:hover {
+    background-color: rgba(43, 3, 43, 0.562);
+}
+
+.custom-tooltip {
+    background-color: rgb(36, 39, 36);
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px 10px #00000050;
+    width: 150px;
+    height: 70px;
+    padding: 4px;
+    color: greenyellow;
+}
